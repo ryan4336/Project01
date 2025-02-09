@@ -52,6 +52,70 @@ public class Book {
 		this.ISBN = other.ISBN;
 		this.price = other.price;
 	}
+	/**
+	 * This method will get the title of the Book.
+	 * @return
+	 * 		Returns the title of the Book as a String.
+	 */
+	public String getTitle() {
+		return title;
+	}
+	/**
+	 * This method will set the title of the Book to the given argument.
+	 * @param title
+	 * 		 String to be the new title of the Book.
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	/**
+	 * This method will get the author of the Book.
+	 * @return
+	 * 		Returns the author of the Book as a String.
+	 */
+	public String getAuthor() {
+		return author;
+	}
+	/**
+	 * This method will set the author of the Book to the given argument.
+	 * @param author
+	 * 		 String to be the new author of the Book.
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	/**
+	 * This method will get the ISBN of the Book.
+	 * @return
+	 * 		Returns the ISBN of the Book as a String.
+	 */
+	public String getISBN() {
+		return ISBN;
+	}
+	/**
+	 * This method will set the ISBN of the Book to the given argument.
+	 * @param ISBN
+	 * 		 String to be the new ISBN of the Book.
+	 */
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
+	}
+	/**
+	 * This method will get the price of the Book.
+	 * @return
+	 * 		Returns the price of the Book as a double.
+	 */
+	public double getPrice() {
+		return price;
+	}
+	/**
+	 * This method will set the price of the Book to the given argument.
+	 * @param price
+	 * 		 double to be the new price of the Book.
+	 */
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	
 }
 
