@@ -40,6 +40,18 @@ public class Book {
 		this.ISBN = ISBN;
 		this.price = price;
 	}
+	/**
+	 * When this constructor is called, it will create a Book object that is 
+	 * a copy of another Book object (given as the argument). 
+	 * @param other
+	 * 		The Book object to be copied.
+	 */
+	public Book(Book other) {
+		this.title = other.title;
+		this.author = other.author;
+		this.ISBN = other.ISBN;
+		this.price = other.price;
+	}
 	
 }
 
