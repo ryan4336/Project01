@@ -1,5 +1,7 @@
 package project01.book;
 
+import java.util.Objects;
+
 /**
  * The Book class is used to represent a book with a 
  * title, author, ISBN, and price.
@@ -115,6 +117,37 @@ public class Book {
 	 */
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	/**
+	 * This method converts the Book object's properties into a readable format.
+	 */
+	@Override
+	public String toString() {
+		return title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")";
+	}
+	/**
+	 * This method compares a Book object to another Object (casted to type 'Book'). 
+	 * Used to compare two Book objects.
+	 * @param obj
+	 * 		Object to be casted as type 'Book' and compared to another Book object.
+	 * @return	
+	 * 		Returns false if the Object argument given is null, or if the Object argument given
+	 * is not of the same class as the Object it is being compared to.
+	 * 
+	 * 		Returns true if the Objects being compared are equal.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
+				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
+				&& Objects.equals(title, other.title);
 	}
 	
 }
