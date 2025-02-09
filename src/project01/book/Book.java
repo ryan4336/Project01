@@ -22,7 +22,24 @@ public class Book {
 		ISBN = "Unknown";
 		price = 0.0;
 	}
-	
+	/**
+	 * When this constructor is called, it will create a Book object using four parameters: 
+	 * (String)title, (String)author, (String)ISBN, and (double)price.
+	 * @param title 
+	 * 		 String to be the title of the book.
+	 * @param author
+	 * 		 String to be the author of the book.
+	 * @param ISBN
+	 * 		 String to be the ISBN of the book.
+	 * @param price
+	 * 		 double to be the price of the book.
+	 */
+	public Book(String title, String author, String ISBN, double price) {
+		this.title = title;
+		this.author = author;
+		this.ISBN = ISBN;
+		this.price = price;
+	}
 	
 }
 
