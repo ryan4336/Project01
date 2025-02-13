@@ -43,17 +43,20 @@ public boolean addBook(Book book)
  */
 public boolean removeBook(Book book)
 {
+	
 	for(int i=0; i<bookcount; i++)
 	{
 		if(books[i].equals(book))
 		{
+			System.out.println("\nRemoving book: " + book);
 			books[i]=books[bookcount-1];
 			books[bookcount-1] = null;
 			bookcount--;
 			return true;
 		}
 	}
-			return false;
+	System.out.println("\nCannot remove book: \"" + book + "\", book does not exist.");
+	return false;
 }
 
 
@@ -64,10 +67,12 @@ public boolean removeBook(Book book)
  */
 public Book searchByISBN(String ISBN)
 {
+	System.out.println("\nSearching for book with ISBN: " + ISBN);
 	for(int i=0; i<bookcount; i++)
 	{
 		if(books[i].getISBN().equals(ISBN))
 		{
+			System.out.println("Book found: " + books[i]);
 			return books[i];
 		}
 	}
@@ -79,9 +84,12 @@ public Book searchByISBN(String ISBN)
  */
 public void displayBooks()
 {
+	int bookNum = 1;
+	System.out.println("\nAll books in the library:");
 	for(int i=0; i<bookcount; i++)
 	{
-		System.out.println(books[i].toString());
+		System.out.println(bookNum + ". " + books[i].toString());
+		bookNum++;
 		}
 	}
 }
