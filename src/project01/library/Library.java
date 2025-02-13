@@ -34,6 +34,56 @@ public boolean addBook(Book book)
 	}
 		return false;
 }
+
+
+/**
+ * used to remove book from library
+ * @param book the Book to remove
+ * @return true if book is removed and false if none to remove
+ */
+public boolean removeBook(Book book)
+{
+	for(int i=0; i<bookcount; i++)
+	{
+		if(books[i].equals(book))
+		{
+			books[i]=books[bookcount-1];
+			books[bookcount-1] = null;
+			bookcount--;
+			return true;
+		}
+	}
+			return false;
+}
+
+
+/**
+ * used to search for book via ISBN
+ * @param ISBN of the book to be searched
+ * @return if found and null if not 
+ */
+public Book searchByISBN(String ISBN)
+{
+	for(int i=0; i<bookcount; i++)
+	{
+		if(books[i].getISBN().equals(ISBN))
+		{
+			return books[i];
+		}
+	}
+			return null;
+}
+
+/**
+ * display books in library
+ */
+public void displayBooks()
+{
+	for(int i=0; i<bookcount; i++)
+	{
+		System.out.println(books[i].toString());
+		}
+	}
 }
 
 
